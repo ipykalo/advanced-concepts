@@ -9,9 +9,9 @@ export const {
   ASYNC_OPTIONS_TYPE,
 } = new ConfigurableModuleBuilder<{
   baseUrl?: string;
-}>({ alwaysTransient: true })
-  // .setClassMethodName('forRoot')
-  // .setFactoryMethodName('resolve')
+}>({ alwaysTransient: false })
+  //.setClassMethodName('forRoot')
+  //.setFactoryMethodName('resolve')
   .setExtras<{ isGlobal?: boolean }>(
     {
       isGlobal: true,
