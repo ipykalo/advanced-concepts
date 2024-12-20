@@ -13,8 +13,8 @@ import { CoffeesService } from './coffees.service';
 import { CreateCoffeeDto } from './dto/create-coffee.dto';
 import { UpdateCoffeeDto } from './dto/update-coffee.dto';
 import { CircuitBreakerInterceptor } from '../common/interceptors/circuit-breaker/circuit-breaker.interceptor';
-import { EntityExistsPipe } from '../common/pipes/entity-exists/entity-exists.pipe';
-import { Coffee } from './entities/coffee.entity';
+// import { EntityExistsPipe } from '../common/pipes/entity-exists/entity-exists.pipe';
+// import { Coffee } from './entities/coffee.entity';
 
 @UseInterceptors(CircuitBreakerInterceptor)
 @Controller('coffees')
@@ -38,7 +38,7 @@ export class CoffeesController {
   }
 
   @Get(':id')
-  findOne(@Param('id', EntityExistsPipe(Coffee)) id: string) {
+  findOne(@Param('id' /*EntityExistsPipe(Coffee)*/) id: string) {
     return this.coffeesService.findOne(+id);
   }
 
