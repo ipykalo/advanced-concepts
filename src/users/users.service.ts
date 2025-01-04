@@ -14,6 +14,7 @@ export class UsersService {
   }
 
   findAll() {
+    console.log(this.dataSourceService.requestContext);
     return `This action returns all users`;
   }
 

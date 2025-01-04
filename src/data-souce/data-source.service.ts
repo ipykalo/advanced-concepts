@@ -3,5 +3,5 @@ import { REQUEST } from '@nestjs/core';
 
 @Injectable({ scope: Scope.REQUEST, durable: true })
 export class DataSourceService {
-  constructor(@Inject(REQUEST) private readonly requestContext: unknown) {}
+  constructor(@Inject(REQUEST) public readonly requestContext: unknown) {}
 }
